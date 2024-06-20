@@ -1,14 +1,16 @@
 import unittest
 
-def add(a, b):
-    return a + b
+def get_details():
+    name = "John Doe"
+    age = 30
+    return f"My name is {name} and I am {age} years old."
 
 class TestMain(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(add(2, 3), 5)
-        self.assertEqual(add(-1, 1), 0)
-        self.assertEqual(add(0, 0), 0)
+    def test_get_details(self):
+        self.assertEqual(get_details(), "My name is John Doe and I am 30 years old.")
 
 if __name__ == "__main__":
+    print(get_details())
     unittest.main()
+
 
